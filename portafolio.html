@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <!-- Tailwind CSS CDN (Replace with local link if needed) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Agregar efectos hover */
+    /* Efecto de escala al pasar el ratón por encima del botón "Contact Me" */
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+    /* Efecto de cambio de color al pasar el ratón por encima de los íconos */
+    .hover-color svg:hover {
+      stroke: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="grid min-h-screen w-full lg:grid-cols-[280px_1fr] gap-4 p-4 md:gap-8 md:p-6">
+
+    <div class="border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
+      <div class="flex h-full max-h-screen flex-col gap-2">
+
+        <div class="flex h-[60px] items-center border-b px-6">
+          <a class="flex items-center gap-2 font-semibold" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>John Doe</span>
+          </a>
+          <button class="inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:bg-accent hover:text-accent-foreground ml-auto h-8 w-8 hover-scale">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 hover-color">
+              <path d="M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8Z"></path>
+              <polyline points="15,9 18,9 18,11"></polyline>
+              <path d="M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2v0"></path>
+              <line x1="6" x2="7" y1="10" y2="10"></line>
+            </svg>
+            <span class="sr-only">Contact</span>
+          </button>
+        </div>
+
+        <div class="flex-1 overflow-auto py-2">
+          <nav class="grid items-start px-4 text-sm font-medium">
+            <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 hover-color">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+              </svg>
+              Resume
+            </a>
+            <!-- More navigation links... -->
+          </nav>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+
+      <header class="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
+        <h1 class="font-semibold text-lg md:text-2xl">My Portfolio</h1>
+      </header>
+
+      <main class="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6 pb-4">
+            <h3 class="text-2xl font-semibold leading-none tracking-tight">About Me</h3>
+          </div>
+          <div class="p-6">
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              I'm a full-stack developer with experience in JavaScript, React, Node.js, and more. I love solving problems and building scalable web applications.
+            </p>
+          </div>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6 pb-4">
+            <h3 class="text-2xl font-semibold leading-none tracking-tight">My Skills</h3>
+          </div>
+          <div class="p-6">
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Skills -->
+              <div class="inline-flex items-center rounded-full border w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 p-2">JavaScript</div>
+              <!-- More skills... -->
+            </div>
+          </div>
+        </div>
+        <div class="mt-auto p-4">
+          <button class="inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-scale">
+            Contact Me
+          </button>
+        </div>
+      </main>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
