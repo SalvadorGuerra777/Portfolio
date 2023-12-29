@@ -28,13 +28,11 @@
       <div class="flex h-full max-h-screen flex-col gap-2">
 
         <div class="flex h-[60px] items-center border-b px-6">
-          <a class="flex items-center gap-2 font-semibold" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
-              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            <span>John Doe</span>
-          </a>
+          <div class="w-14 h-14 rounded-full overflow-hidden">
+            <!-- Agregar tu foto aquí -->
+            <img src="/IMG/salvador.jpg" alt="foto">
+          </div>
+          <h1 class="font-semibold text-lg md:text-2xl">Salvador Guerra</h1>
           <button class="inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background hover:bg-accent hover:text-accent-foreground ml-auto h-8 w-8 hover-scale">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 hover-color">
               <path d="M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8Z"></path>
@@ -64,6 +62,10 @@
     <div class="flex flex-col">
 
       <header class="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
+        <div class="w-14 h-14 rounded-full overflow-hidden">
+          <!-- Agregar tu foto aquí también -->
+          <img src="/IMG/salvador.jpg" alt="foto">
+        </div>
         <h1 class="font-semibold text-lg md:text-2xl">My Portfolio</h1>
       </header>
 
@@ -84,14 +86,34 @@
           </div>
           <div class="p-6">
             <div class="grid grid-cols-2 gap-4">
-              <!-- Skills -->
-              <div class="inline-flex items-center rounded-full border w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 p-2">JavaScript</div>
-              <!-- More skills... -->
+              <!-- JavaScript -->
+              <div class="flex items-center gap-2">
+                  <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/javascript-programming-language-icon.png" alt="JavaScript" class="w-6 h-6">
+                <div class="inline-flex items-center rounded-full border w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 p-2">JavaScript</div>
+              </div>
+              <!-- HTML -->
+              <div class="flex items-center gap-2">
+                  <img src="https://images.vexels.com/media/users/3/166383/isolated/preview/6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon.png" alt="HTML" class="w-6 h-6">
+                <div class="inline-flex items-center rounded-full border w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 p-2">HTML</div>
+              </div>
+              <!-- PHP -->
+              <div class="flex items-center gap-2">
+                  <img src="https://icon-library.com/images/php-icon/php-icon-10.jpg" alt="PHP" class="w-6 h-6">
+                <div class="inline-flex items-center rounded-full border w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 p-2">PHP</div>
+              </div>
+              <!-- React -->
+              <div class="flex items-center gap-2">
+                  <img src="https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png" alt="React" class="w-6 h-6">
+                <div class="inline-flex items-center rounded-full border w-fit text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 p-2">React</div>
+              </div>
+              <!-- Otros lenguajes... -->
             </div>
           </div>
         </div>
+        
         <div class="mt-auto p-4">
-          <button class="inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full hover-scale">
+          <!-- Cambiar el color del botón a negro -->
+          <button id="contactBtn" class="inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-gray-900 h-9 rounded-md px-3 w-full hover-scale">
             Contact Me
           </button>
         </div>
@@ -104,3 +126,29 @@
 </body>
 
 </html>
+
+<script>
+  // Obtener el botón por su ID
+  const contactButton = document.getElementById('contactBtn');
+
+  // Función para manejar el clic en el botón
+  function sendEmail() {
+    // Destinatario del correo electrónico (reemplaza 'destinatario@ejemplo.com')
+    const recipient = 'salvadorguerra2003@gmail.com';
+
+    // Asunto del correo electrónico
+    const subject = '¡Hola!';
+
+    // Cuerpo del correo electrónico
+    const body = 'Hola, estoy interesado en tu trabajo.';
+
+    // Generar el enlace para abrir el cliente de correo con la información prellenada
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Abrir el cliente de correo predeterminado al hacer clic en el botón
+    window.open(mailtoLink);
+  }
+
+  // Agregar un event listener para detectar el clic en el botón
+  contactButton.addEventListener('click', sendEmail);
+</script>
